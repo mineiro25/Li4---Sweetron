@@ -1,18 +1,17 @@
-﻿div .text-wrapper {
+﻿/*CSS para o texto SweeTron*/
+div .text-wrapper {
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
 }
 
-.text-wrapper img {
-    left: -500px;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: fill;
-    position: relative;
-    top: -10px;
+.text-wrapper{
+    left: -1000px;
+    margin-left: -200px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/images/backSweetron2.jpg");
+    min-height: 75%;
 }
 
 .title {
@@ -30,25 +29,122 @@
     right: 0;
     text-align: left;
     font-size: 16px;
-    font-family:Arial;
+    font-family: Arial;
+    font-weight: lighter;
     top: 30%;
     width: 60%;
 }
 
+
+/*CSS para o texto da MobileForAll*/
+div .mobile4all {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mobile4all {
+    left: -2000px;
+    margin-left: -500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/images/gnration.jpg");
+    min-height: 75%;
+}
+
+.title-mobile {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.texto-mobile {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 5%;
+    right: 0;
+    text-align: left;
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: lighter;
+    top: 80%;
+    width: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Responsvel pela formatação para mobile*/
 @media screen and (max-width: 400px) {
     div .text-wrapper {
-        max-height: 40%;
+        min-height: 100%;
+    }
+
+    .text-wrapper {
+        left: -1000px;
+        margin-left: -500px;
+        background-position: center;
+        background-size: cover;
     }
 
     .title {
-        left: 130%;
+        top: 10%;
+        left: 50%;
     }
 
     .texto-sweetron {
-        left: 90%;
+        left: 7.5%;
         width: 90%;
+        top: 15%;
+        font-size: 13px;
         text-size-adjust: auto;
     }
+
+
+    /*MobileForAll*/
+    div .mobile4all {
+        min-height: 100%;
+    }
+
+    .mobile4all {
+        left: -3000px;
+        margin-left: -900px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .title-mobile {
+        top: 70%;
+        left: 50%;
+    }
+
+    .texto-mobile {
+        left: 7.5%;
+        width: 90%;
+        top: 75%;
+        font-size: 13px;
+        text-size-adjust: auto;
+    }
+
 
 }
 
@@ -59,4 +155,6 @@ footer{
     bottom: 0;
     width: 100%;
     text-align: left;
+    font-size: 19px;
+    font-weight: lighter;
 }
