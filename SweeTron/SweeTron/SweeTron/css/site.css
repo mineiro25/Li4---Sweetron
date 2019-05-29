@@ -1,22 +1,24 @@
 ﻿div .text-wrapper {
+    color: white;
     font-size: 12px;
-    left: -300px;
+    text-align: center;
+}
+
+.text-wrapper img {
+    left: -500px;
     margin-left: 0;
     margin-right: 0;
-    object-fit: contain;
-    position: relative;
-    text-align: center;
-    color: white;
-    top: -20px;
     max-width: 100%;
     max-height: 100%;
-
+    object-fit: fill;
+    position: relative;
+    top: -10px;
 }
 
 .title {
     position: absolute;
     top: 20%;
-    left: 80%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -24,7 +26,7 @@
     position: absolute;
     z-index: 999;
     margin: 0 auto;
-    left: 50%;
+    left: 5%;
     right: 0;
     text-align: left;
     font-size: 16px;
@@ -35,16 +37,15 @@
 
 @media screen and (max-width: 400px) {
     div .text-wrapper {
-        max-height: 90%;
-        object-fit: fill;
+        max-height: 40%;
     }
 
     .title {
-        left: 140%;
+        left: 130%;
     }
 
     .texto-sweetron {
-        left: 100%;
+        left: 90%;
         width: 90%;
         text-size-adjust: auto;
     }
