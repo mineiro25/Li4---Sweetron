@@ -51,3 +51,12 @@
     }
 
 }
+
+/*responsavel para fixar o footer (2019 - MobileForAll) */
+footer{
+    position: fixed;
+    left: 30px;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+}
