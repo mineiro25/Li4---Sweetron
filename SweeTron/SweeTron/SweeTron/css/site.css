@@ -1,0 +1,52 @@
+﻿div .text-wrapper {
+    font-size: 12px;
+    left: -300px;
+    margin-left: 0;
+    margin-right: 0;
+    object-fit: contain;
+    position: relative;
+    text-align: center;
+    color: white;
+    top: -20px;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.title {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.texto-sweetron {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 50%;
+    right: 0;
+    text-align: left;
+    font-size: 16px;
+    font-family:Arial;
+    top: 30%;
+    width: 60%;
+}
+
+@media screen and (max-width: 400px) {
+    div .text-wrapper {
+        max-height: 90%;
+        object-fit: fill;
+    }
+
+    .title {
+        left: 140%;
+    }
+
+    .texto-sweetron {
+        left: 100%;
+        width: 90%;
+        text-size-adjust: auto;
+    }
+
+}

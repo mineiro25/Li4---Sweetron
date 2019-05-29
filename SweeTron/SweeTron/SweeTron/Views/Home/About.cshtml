@@ -2,36 +2,26 @@
     ViewBag.Title = "Sweetron";
 }
 
-<section id="app">
-    <img class="backgroung" src="/images/backSweetron.jpg" alt="" style="width:1700px;height:650px;" align="left" />
-    
-    <style>
+<link rel="stylesheet" href="~/css/site.css" />
 
+<div class="text-wrapper" style="height: 350px; width: 2000px;">
 
+    <img src="/images/backSweetron.jpg" alt="" />
 
-    </style>
-    
-    
-    <div class="top" style="margin-top: -331px; height: 750px; padding-top: 52.96px; padding-bottom: 52.96px;">
-
-        <div class="row">
-            <div class="text-wrapper" style="height: 350px; width: 700px;">
-                <font color="white" size="4">
-                    <!--Vai mostrar o titulo-->
-                    <h2 style="text-align:center;">@ViewBag.Title</h2>
-                    <div>
-                        <!--Texto descritivo para h2-->
-                        <p>
-                            Face à crescente exigência do consumidor pelas mais variadas opções alimentares que respondam e satisfaçam as suas necessidades
-                            e numa sociedade cada vez mais manipulada pelo tempo. Foi com esta linha de pensamento que a empresa <strong>MobileForAll</strong> criou em parceria com o
-                            Chef Hernâni Ermida e os supermercados Lidl, a <strong>SweeTron</strong>, uma aplicação preparada para proporcionar ao consumidor uma nova experiência culinária.
-                            Neste sentido são simplificadas as frequentes indecisões do consumidor ao facultar-lhe os níveis de dificuldade, o tempo despendido e vídeo aulas das
-                            receitas culinárias (sobremesa), de modo a esclarecer quaisquer dúvidas na conceção das mesmas. São também proporcionadas sugestões para cada dia da semana,
-                            localizações de superfícies de venda a retalho e identificação dos produtos necessários à conceção da receita escolhida.
-                        </p>
-                    </div>
-                </font>
-            </div>
-        </div>
+    <div class="title">
+        <!--Vai mostrar o titulo-->
+        <h2 style="text-align:center;">@ViewBag.Title</h2>
     </div>
-</section>
+        
+    <div class="texto-sweetron">
+        <!--Texto descritivo para h2-->
+        <p>
+                Face à crescente exigência do consumidor pelas mais variadas opções alimentares que respondam e satisfaçam as suas necessidades
+                e numa sociedade cada vez mais manipulada pelo tempo. Foi com esta linha de pensamento que a empresa <strong>MobileForAll</strong> criou em parceria com o
+                Chef Hernâni Ermida e os supermercados Lidl, a <strong>SweeTron</strong>, uma aplicação preparada para proporcionar ao consumidor uma nova experiência culinária.
+                Neste sentido são simplificadas as frequentes indecisões do consumidor ao facultar-lhe os níveis de dificuldade, o tempo despendido e vídeo aulas das
+                receitas culinárias (sobremesa), de modo a esclarecer quaisquer dúvidas na conceção das mesmas. São também proporcionadas sugestões para cada dia da semana,
+                localizações de superfícies de venda a retalho e identificação dos produtos necessários à conceção da receita escolhida.
+        </p>
+    </div>
+</div>
