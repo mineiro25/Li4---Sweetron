@@ -6,11 +6,11 @@
 
 <body>
     <div style="width:150px; margin:0 auto;">
-            <div class="btn-group-vertical">
-                <button style="margin-top:8px" type="button" class="btn btn-secundary btn-lg bt">@Html.ActionLink("Inserir Receita", "Create", "Receita")</button>
-                <button type="button" class="btn btn-secundary btn-lg bt">@Html.ActionLink("Remover Receita", "", "Utilizador")</button>
-                <button type="button" class="btn btn-secundary btn-lg bt">@Html.ActionLink("Editar Receita", "About", "Home")</button>
-                <button type="button" class="btn btn-danger btn-lg bt">@Html.ActionLink("Modo Utilizador", "Index", "Utilizador")</button>
-            </div>
+        <div class="btn-group-vertical">
+            <button style="margin-top:8px" type="button" class="btn btn-secundary btn-lg bt" onclick="window.location.href='/Receita/Create'">Inserir Receita</button>
+            <button type="button" class="btn btn-secundary btn-lg bt" onclick="window.location.href='/Utilizador/Index'">Remover Receita</button>
+            <button type="button" class="btn btn-secundary btn-lg bt" onclick="window.location.href='/Utilizador/Index'">Editar Receita</button>
+            <button type="button" class="btn btn-danger btn-lg bt" onclick="window.location.href='/Utilizador/Index'">Modo Utilizador</button>
+        </div>
     </div>
 </body> 

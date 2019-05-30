@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="SweeTronModel.Possui" Width="1.5" PointX="7.75" PointY="9.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SweeTronModel.Receita" Width="1.5" PointX="4.5" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="SweeTronModel.Solicita" Width="1.5" PointX="4.375" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SweeTronModel.sysdiagrams" Width="1.5" PointX="18.125" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SweeTronModel.sysdiagrams" PointX="0.75" PointY="0.75" Width="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SweeTronModel.Utilizador" Width="1.5" PointX="1.125" PointY="4.375" IsExpanded="true" />
         <AssociationConnector Association="SweeTronModel.FK_Possui_Ingrediente" ManuallyRouted="false" />
         <AssociationConnector Association="SweeTronModel.FK_Possui_Receita" ManuallyRouted="false" />
