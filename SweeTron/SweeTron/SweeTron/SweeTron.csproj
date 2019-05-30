@@ -255,6 +255,7 @@
     <Content Include="Views\Passos\Details.cshtml" />
     <Content Include="Views\Passos\Edit.cshtml" />
     <Content Include="Views\Passos\Index.cshtml" />
+    <Content Include="Views\Utilizador\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

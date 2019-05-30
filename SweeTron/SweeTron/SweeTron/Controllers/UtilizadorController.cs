@@ -17,7 +17,7 @@ namespace SweeTron.Controllers
         // GET: Utilizador
         public ActionResult Index()
         {
-            return View(db.Utilizador.ToList());
+            return View(/*db.Utilizador.ToList() com isto n ta dar pa testar esta pagina sem ligaçao a bd*/);
         }
 
         // GET: Utilizador/Details/5
@@ -123,5 +123,10 @@ namespace SweeTron.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult Menu()
+        {
+            return View(/*db.Utilizador.ToList() com isto n ta dar pa testar esta pagina sem ligaçao a bd*/);
+        }
+
     }
 }
