@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SweeTronModelStoreContainer" CdmEntityContainer="SweeTronEntities1">
+    <EntitySetMapping Name="Ingrediente">
+      <EntityTypeMapping TypeName="SweeTronModel.Ingrediente">
+        <MappingFragment StoreEntitySet="Ingrediente">
+          <ScalarProperty Name="ID_Ingrediente" ColumnName="ID_Ingrediente" />
+          <ScalarProperty Name="Preço" ColumnName="Preço" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Passo">
+      <EntityTypeMapping TypeName="SweeTronModel.Passo">
+        <MappingFragment StoreEntitySet="Passo">
+          <ScalarProperty Name="ID_Passo" ColumnName="ID_Passo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Possui">
+      <EntityTypeMapping TypeName="SweeTronModel.Possui">
+        <MappingFragment StoreEntitySet="Possui">
+          <ScalarProperty Name="ID_Ingrediente" ColumnName="ID_Ingrediente" />
+          <ScalarProperty Name="ID_Receita" ColumnName="ID_Receita" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Receita">
+      <EntityTypeMapping TypeName="SweeTronModel.Receita">
+        <MappingFragment StoreEntitySet="Receita">
+          <ScalarProperty Name="ID_Receita" ColumnName="ID_Receita" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Dificuldade" ColumnName="Dificuldade" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Duracao" ColumnName="Duracao" />
+          <ScalarProperty Name="Preparacao" ColumnName="Preparacao" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicita">
+      <EntityTypeMapping TypeName="SweeTronModel.Solicita">
+        <MappingFragment StoreEntitySet="Solicita">
+          <ScalarProperty Name="ID_Utilizador" ColumnName="ID_Utilizador" />
+          <ScalarProperty Name="ID_Receita" ColumnName="ID_Receita" />
+          <ScalarProperty Name="Avaliacao" ColumnName="Avaliacao" />
+          <ScalarProperty Name="Favorito" ColumnName="Favorito" />
+          <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utilizador">
+      <EntityTypeMapping TypeName="SweeTronModel.Utilizador">
+        <MappingFragment StoreEntitySet="Utilizador">
+          <ScalarProperty Name="ID_Utilizador" ColumnName="ID_Utilizador" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Data_Nascimento" ColumnName="Data_Nascimento" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Contem" TypeName="SweeTronModel.Contem" StoreEntitySet="Contem">
+      <EndProperty Name="Passo">
+        <ScalarProperty Name="ID_Passo" ColumnName="ID_Passo" />
+      </EndProperty>
+      <EndProperty Name="Receita">
+        <ScalarProperty Name="ID_Receita" ColumnName="ID_Receita" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

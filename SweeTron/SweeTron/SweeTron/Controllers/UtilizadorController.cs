@@ -12,12 +12,13 @@ namespace SweeTron.Controllers
 {
     public class UtilizadorController : Controller
     {
-        private SweeTronEntities db = new SweeTronEntities();
+        private SweeTronEntities1 db = new SweeTronEntities1();
 
         // GET: Utilizador
         public ActionResult Index()
         {
-            return View(/*db.Utilizador.ToList() com isto n ta dar pa testar esta pagina sem ligaçao a bd*/);
+            
+            return View(db.Utilizador.ToList());
         }
 
         // GET: Utilizador/Details/5
@@ -52,7 +53,9 @@ namespace SweeTron.Controllers
             {
                 db.Utilizador.Add(utilizador);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                View(utilizador);
+
+                return RedirectToAction("Index","Home");
             }
 
             return View(utilizador);

@@ -7,10 +7,10 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Utilizador</h4>
         <hr />
@@ -67,11 +67,12 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" onclick="window.location.href='/Home/Index'"/>
+                <input type="submit" value="Create" class="btn btn-default" onclick="window.location.href='/Home/Index'" />
             </div>
         </div>
     </div>
 }
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")

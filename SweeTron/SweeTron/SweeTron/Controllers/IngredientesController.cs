@@ -12,7 +12,7 @@ namespace SweeTron.Controllers
 {
     public class IngredientesController : Controller
     {
-        private SweeTronEntities db = new SweeTronEntities();
+        private SweeTronEntities1 db = new SweeTronEntities1();
 
         // GET: Ingredientes
         public ActionResult Index()
