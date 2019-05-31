@@ -15,11 +15,20 @@ $button-background-color: #27AE60;
 }
 
 html {
-    background: url("/images/backSweetron.jpg") no-repeat center center fixed;
+    background: url("/images/cupcakes.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.logo img{
+    display: block;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 80%;
 }
 
 body {
@@ -42,37 +51,30 @@ body, input, button {
 }
 
 .login {
-    padding: 15px;
+    padding: 50px;
     width: 400px;
     min-height: 400px;
     margin: 2% auto 0 auto;
-    .heading
-
-{
-    text-align: center;
-    margin-top: 1%;
-    h2
-
-{
-    font-size: 3em;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.7);
-    display: inline-block;
-    padding-bottom: 5px;
-    text-shadow: 1px 1px 3px $shadow-color;
-}
-
-}
+    
+    .heading{
+        text-align: center;
+        margin-top: 1%;
+    
+    h2{
+        font-size: 3em;
+        font-weight: 300;
+        color: rgba(0,0,0, 0.0);
+        display: inline-block;
+        padding-bottom: 5px;
+        text-shadow: 1px 1px 3px $shadow-color;
+      }
+            }
 
 form {
-    .input-group
-
-{
+    .input-group{
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    &:last-of-type
-
-{
+    &:last-of-type{
     border-top: none;
 }
 
@@ -80,12 +82,10 @@ span {
     background: transparent;
     min-width: 53px;
     border: none;
-    i
-
-{
-    font-size: 1.5em;
-    color: rgba(255, 255, 255, 0.2);
-}
+    i{
+        font-size: 1.5em;
+        color: rgba(255, 255, 255, 0.2);
+    }
 
 }
 }
@@ -193,19 +193,18 @@ button {
     margin-top: 0;
 }
 
-margin-top: 0;
-width: 400px;
-font-size: 1em;
-min-height: 0;
-}
+    margin-top: 0;
+    width: 400px;
+    font-size: 1em;
+    min-height: 0;
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-    .login {
-        margin-top: 0;
-        width: 200px;
-        font-size: 0.7em;
-        min-height: 0;
-    }
+.logo img {
+    margin-top: 120px;
+    margin-left: -3px;
+    width: 80%;
 }
+
+
+}
+

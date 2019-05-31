@@ -1,17 +1,71 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<!------ Include the above in your HEAD tag ---------->
+<link href="~/css/Contact.css" rel="stylesheet">
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<head>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="titulo">
+    <div class="split left">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-header bg-success text-white text-uppercase" style="color:white; font-size: 70px; text-align:center; background-color: transparent;"><i class="fa fa-home"></i>Contacte-nos!</div>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Indique o seu nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Endereço email</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email" required>
+                                <small id="emailHelp" class="form-text text-muted">Não iremos partilhar o seu email com mais ninguém!</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea class="form-control" id="message" rows="6" required></textarea>
+                            </div>
+                            <div class="mx-auto">
+                                <button type="submit" class="btn btn-primary text-right">Submeter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--coluna da morada-->
+        <div class="split right">
+            <div class="col-12 col-sm-8">
+                <div class="card bg-light mb-3">
+                    <div class="card-header bg-success text-white text-uppercase" style="color:black; background-color: transparent; font-weight: normal;"><i class="fa fa-home"></i>Morada</div>
+                    <div class="card-body" style="background-color:white; color:black;">
+                        <br />
+                        <p>Praça Conde de Agrolongo 123</p>
+                        <p>4700-314 Braga</p>
+                        <p>Portugal</p>
+                        <p>Email: contact@mobileforall.com</p>
+                        <p>Tel. (+351) 253 142 200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mapa">
+    <iframe width="800" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=800&cp=41.55334183052719~-8.426186272088238&lvl=18&typ=s&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no" align="middle"></iframe>
+
+
+    <div style="white-space: nowrap; text-align: center; width: 800px; padding: 6px 0;">
+        <a id="largeMapLink" target="_blank" style="color:white" href="https://www.bing.com/maps?cp=41.55334183052719~-8.426186272088238&amp;sty=r&amp;lvl=18&amp;FORM=MBEDLD">Ver Mapa Maior</a> &nbsp; | &nbsp;
+        <a id="dirMapLink" target="_blank" style="color:white" href="https://www.bing.com/maps/directions?cp=41.55334183052719~-8.426186272088238&amp;sty=r&amp;lvl=18&amp;rtp=~pos.41.55334183052719_-8.426186272088238____&amp;FORM=MBEDLD">Obter Direções</a>
+    </div>
+</div>
+
+

@@ -73,6 +73,7 @@ div .mobile4all {
     width: 60%;
 }
 
+
 .bt {
     margin-bottom: 8px;
     border-radius: 30px;
@@ -154,7 +155,7 @@ div .mobile4all {
 }
 
 /*responsavel para fixar o footer (2019 - MobileForAll) */
-footer{
+#footer{
     position: fixed;
     left: 30px;
     bottom: 0;

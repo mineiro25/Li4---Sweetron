@@ -1,0 +1,59 @@
+﻿html {
+    margin-top: -200px;
+    background: url("/images/contact.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.left {
+
+    left: 300px;
+    
+}
+
+.right {
+    margin-top: 200px;
+    margin-right: 0;
+    right: -150px;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: -90px;
+    padding-top: 200px;
+    position: absolute;
+    font-weight: lighter;
+    color: white;
+}
+
+.mapa{
+    top: 700px;
+    margin-left: 140px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (max-width: 400px) {
+    .left {
+        top: 10px;
+        left: 100px;
+    }
+
+    .right {
+        top: 450px;
+        right: 100px;
+    }
+
+    .mapa {
+        top: 1190px;
+        right: -200px;
+        -webkit-transform: scale(0.35);
+        -moz-transform: scale(0.35);
+    }
+}
