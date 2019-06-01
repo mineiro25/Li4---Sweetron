@@ -17,9 +17,9 @@ namespace SweeTron.Controllers
         // GET: Utilizador
         public ActionResult Index()
         {
-            
-            return View(db.Utilizador.ToList());
+            return View();
         }
+
 
         // GET: Utilizador/Details/5
         public ActionResult Details(int? id)
@@ -53,7 +53,6 @@ namespace SweeTron.Controllers
             {
                 db.Utilizador.Add(utilizador);
                 db.SaveChanges();
-                View(utilizador);
 
                 return RedirectToAction("Index","Home");
             }
@@ -130,6 +129,8 @@ namespace SweeTron.Controllers
         {
             return View(/*db.Utilizador.ToList() com isto n ta dar pa testar esta pagina sem ligaçao a bd*/);
         }
+
+
 
     }
 }
