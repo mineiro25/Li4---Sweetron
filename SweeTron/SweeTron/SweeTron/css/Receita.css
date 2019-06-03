@@ -12,3 +12,28 @@
     font-weight: lighter;
     color: white;
 }
+
+@media screen and (max-width: 400px){
+    .tabelaReceitas{
+        background-size: initial;
+    }
+
+    .table {
+        padding: 10px 40px;
+        width: 300px;
+        resize: both;
+        overflow: auto;
+    }
+}
+
+
+/*CSS dos Passos*/
+@media screen and (max-width: 400px) {
+    iframe{
+        margin-top: 10px;
+        height: 300px;
+        width: 100%;
+        resize: both;
+        overflow: auto;
+    }
+}

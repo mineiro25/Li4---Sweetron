@@ -4,6 +4,11 @@
     ViewBag.Title = "Details";
 }
 
+<head>
+    <link rel="stylesheet" href="/css/Receita.css" />
+</head>
+
+
 <h2>Siga o seguinte passo</h2>
 
 <div>
@@ -22,11 +27,13 @@
         </dt>
 
         <dd>
-            <iframe width="560"
-                    height="315"
-                    src="@Html.DisplayFor(model => model.Video)"
-                    frameborder="0"
-                    allowfullscreen></iframe>
+            <div class="frame">
+                <iframe width="560"
+                        height="315"
+                        src="@Html.DisplayFor(model => model.Video)"
+                        frameborder="0"
+                        allowfullscreen></iframe>
+            </div>
         </dd>
 
 
