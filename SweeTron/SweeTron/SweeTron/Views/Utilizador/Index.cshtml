@@ -4,14 +4,14 @@
 
 <link rel="stylesheet" href="~/css/site.css" type="text/css"/>
 
-<body>
+<body class="index_user">
     <div style="width:150px; margin:0 auto;">
         <div class="btn-group-vertical" style="color: black; font-weight: lighter;">
             <button type="button" class="btn btn-primary" onclick="window.location.href='/Receita/Index'">Cozinhar Receita</button>
             <button type="button" class="btn btn-primary" onclick="window.location.href='/Utilizador/Index'">Favoritos</button>
             <button type="button" class="btn btn-primary" onclick="window.location.href='/Utilizador/Index'">Histórico</button>
             <button type="button" class="btn btn-primary" onclick="window.location.href='/Utilizador/Index'">Filtro</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='/Utilizador/Index'">Plano Semanal</button>
+            <button onclick="showhide('plano')" type="button" class="btn btn-primary">Plano Semanal</button>
             <button type="button" class="btn btn-primary" onclick="window.location.href='/Utilizador/Index'">Avaliar Receita</button>
             <button type="button" class="btn btn-primary" onclick="window.location.href='/Home/Index'" >Terminar Sessão</button>
         </div>
@@ -19,7 +19,7 @@
 
 
 
-    <div class="plano_semanal">
+    <div class="plano_semanal" id="plano" style="display:none;">
         <tbody>
             <h3 style="font-weight:lighter; color: black;">Plano Semanal</h3>
             <tr class="table-dark">
@@ -54,6 +54,16 @@
         </tbody>
 
     </div>
+
+    <script>
+        function showhide(id) {
+            var divid = document.getElementById(id);
+            if (divid.style.display === 'none') {
+                divid.style.display = 'block';
+            }
+        }
+    </script>
+
 
 
 </body>

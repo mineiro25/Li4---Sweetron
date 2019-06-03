@@ -84,21 +84,6 @@ div .mobile4all {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Responsvel pela formatação para mobile*/
 @media screen and (max-width: 400px) {
     div .text-wrapper {
@@ -163,4 +148,34 @@ div .mobile4all {
     text-align: left;
     font-size: 19px;
     font-weight: lighter;
+}
+
+
+/*CSS para o index do User*/
+.index_user {
+    margin-top: 210px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("/images/rolochocolate.jpg");
+    background-repeat: no-repeat;
+}
+
+.btn-group-vertical {
+    margin-left: -670px;
+    margin-top: -100px;
+}
+
+.btn btn-primary {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.plano_semanal {
+    text-align: center;
+    width: 200px;
+    height 430px;
+    background-color: white;
+    margin-top: -230px;
+    margin-left: 500px;
+    border-radius: 10px;
 }
