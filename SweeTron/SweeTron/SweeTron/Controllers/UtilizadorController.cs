@@ -51,10 +51,21 @@ namespace SweeTron.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Utilizador.Add(utilizador);
-                db.SaveChanges();
+                if (db.Utilizador.ToList<Utilizador>().Count() > 0)
+                {
+                    var user = (from u in db.Utilizador
+                                where u.Username == utilizador.Username
+                                select u);
 
-                return RedirectToAction("Index","Home");
+                    if (user.ToList<Utilizador>().Count() > 0) ModelState.AddModelError("", "Já existe esse username, tente outro!");
+                    else
+                    {
+                        db.Utilizador.Add(utilizador);
+                        db.SaveChanges();
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
             }
 
             return View(utilizador);

@@ -22,19 +22,24 @@
         </dt>
 
         <dd>
-            
-            <iframe src="" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560"
+                    height="315"
+                    src="@Html.DisplayFor(model => model.Video)"
+                    frameborder="0"
+                    allowfullscreen></iframe>
         </dd>
 
 
         @if (ViewBag.ids_passos.Length == 0)
         {
-           <p>Finalizou a sua receita</p>
-           @Html.ActionLink("Retornar ao menu principal","Index","Utilizador",null,null)
+            <p>Finalizou a sua receita</p>
+            @Html.ActionLink("Retornar ao menu principal", "Index", "Utilizador", null, null)
         }
         else
         {
             @Html.ActionLink("Proximo passo", "Details", new { id = ViewBag.ids_passos[0], array = String.Join("-", ViewBag.ids_passos) })
         }
+
+        @Html.ActionLink("Voltar atrás", null, null, null, new { href = Request.UrlReferrer })
     </dl>
 </div>

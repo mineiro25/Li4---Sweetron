@@ -47,13 +47,18 @@
 
     .right {
         top: 450px;
-        right: 100px;
+        right: 0;
+        width:200px;
     }
 
     .mapa {
-        top: 1190px;
-        right: -200px;
+        top: 1050px;
+        right: -220px;
         -webkit-transform: scale(0.35);
         -moz-transform: scale(0.35);
+    }
+
+    .text-uppercase {
+        margin-top: -90px;
     }
 }

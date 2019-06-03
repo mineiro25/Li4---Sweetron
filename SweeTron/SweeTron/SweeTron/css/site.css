@@ -179,3 +179,14 @@ div .mobile4all {
     margin-left: 500px;
     border-radius: 10px;
 }
+
+@media screen and (max-width: 400px) {
+    .index_user{
+        background-size: initial;
+        margin-left:790px;
+    }
+
+    .plano_semanal{
+        margin-left: 300px;
+    }
+}

@@ -28,7 +28,16 @@ namespace SweeTron.Controllers
                 if (user.ToList<Utilizador>().Count() == 0) ModelState.AddModelError("", "Username e/ou Password Incorrectos!");
                 else
                 {
-                    return RedirectToAction("Index/","Utilizador");
+                    IQueryable<bool> admin = (from u in db.Utilizador
+                                              where u.Username == utilizador.Username && u.Password == utilizador.Password
+                                              select u.Admin);
+                    bool admin2;
+                    foreach (bool b in admin)
+                    {
+                        admin2 = b;
+                        if (admin2 == true) return RedirectToAction("Index/", "Receita");
+                        return RedirectToAction("Index/", "Utilizador");
+                    }
                 }
             }
 

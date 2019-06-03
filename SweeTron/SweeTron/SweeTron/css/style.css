@@ -142,4 +142,16 @@ input, select {
   .appointment-form {
     padding: 50px 30px 70px 30px; } }
 
+@media screen and (max-width: 400px) {
+  .appointment-form {
+    padding: 50px 30px 70px 30px; 
+	}
+
+	.container_inscritos {
+    	width: 300px;
+    	margin-left: 15px;
+    	margin-right: 15px;
+	} 
+}    
+
 /*# sourceMappingURL=style.css.map */

@@ -41,7 +41,7 @@
 
         @foreach (var item in Model)
         {
-            <tr  class="conteudo">
+            <tr  class="conteudo" style="color: white;">
                 <td>
                     @Html.DisplayFor(modelItem => item.Rating)
                 </td>
@@ -59,13 +59,13 @@
                 </td>
                 <td>
                     <a href="@Html.DisplayFor(modelItem => item.Video)"
-                       target="_blank">Link para o YouTube</a>
+                       target="_blank" style="color: white;">Link para o YouTube</a>
                 </td>
                 <td>
                     <img src="
             @Html.DisplayFor(modelItem => item.Foto)" width="100" height="50" />
                 </td>
-                <td>
+                <td style="color: white;">
                     @Html.ActionLink("Confecionar", "Details", new { id = item.ID_Receita })
                 </td>
             </tr>
