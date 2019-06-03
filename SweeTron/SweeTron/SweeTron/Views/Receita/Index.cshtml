@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<SweeTron.Models.Receita>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Selecionar";
 }
 
-<h2>Index</h2>
+<h2>Escolha a sua receita</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -53,15 +50,17 @@
             @Html.DisplayFor(modelItem => item.Preparacao)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Video)
+            <a
+            href="@Html.DisplayFor(modelItem => item.Video)"
+            target="_blank"
+               > Clickaaaa </a>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Foto)
+            <img src="
+            @Html.DisplayFor(modelItem => item.Foto)" width="100" height="50"/>
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Receita }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID_Receita }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Receita })
+            @Html.ActionLink("Confecionar", "Details", new { id=item.ID_Receita })
         </td>
     </tr>
 }

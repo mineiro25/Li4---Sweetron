@@ -12,7 +12,7 @@ namespace SweeTron.Controllers
 {
     public class ReceitaController : Controller
     {
-        private SweeTronEntities1 db = new SweeTronEntities1();
+        private SweeTronEntities2 db = new SweeTronEntities2();
 
         // GET: Receita
         public ActionResult Index()
@@ -28,6 +28,29 @@ namespace SweeTron.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Receita receita = db.Receita.Find(id);
+            Dictionary<Ingrediente, double? > dicionario = new Dictionary<Ingrediente, double? >();
+            //HashSet<Ingrediente> ingredientes = new HashSet<Ingrediente>();
+            System.Diagnostics.Debug.WriteLine("HOLLA");
+
+            foreach (Possui possui in receita.Possui)
+            {
+                int id_ing = possui.ID_Ingrediente;
+                double? quantidade = possui.Quantidade;
+                Ingrediente ing = db.Ingrediente.Find(id_ing);
+                System.Diagnostics.Debug.WriteLine(ing.ToString());
+                dicionario.Add(ing,quantidade);
+            }
+            ViewBag.Ingredientes = dicionario;
+
+            List<int> id_passos = new List<int>();
+
+            foreach(Passo passo in receita.Passo)
+            {
+                id_passos.Add(passo.ID_Passo);
+            }
+
+            ViewBag.ids_passos = id_passos.ToArray();
+
             if (receita == null)
             {
                 return HttpNotFound();

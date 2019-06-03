@@ -12,7 +12,7 @@ namespace SweeTron.Controllers
 {
     public class PassosController : Controller
     {
-        private SweeTronEntities1 db = new SweeTronEntities1();
+        private SweeTronEntities2 db = new SweeTronEntities2();
 
         // GET: Passos
         public ActionResult Index()
@@ -21,13 +21,25 @@ namespace SweeTron.Controllers
         }
 
         // GET: Passos/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? id, string array)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Passo passo = db.Passo.Find(id);
+            System.Diagnostics.Debug.WriteLine(array);
+            if (array == null)
+            {
+
+            }
+            else
+            {
+                int[] s_ids = Array.ConvertAll(array.Split('-'), s => int.Parse(s)).Skip(1).ToArray();
+                ViewBag.ids_passos = s_ids;
+
+            }
+
             if (passo == null)
             {
                 return HttpNotFound();

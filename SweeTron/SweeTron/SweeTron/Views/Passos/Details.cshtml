@@ -4,10 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Siga o seguinte passo</h2>
 
 <div>
-    <h4>Passo</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -26,9 +25,15 @@
             @Html.DisplayFor(model => model.Video)
         </dd>
 
+
+        @if (ViewBag.ids_passos.Length == 0)
+        {
+           <p>Finalizou a sua receita</p>
+           @Html.ActionLink("Retornar ao menu principal","Index","Utilizador",null,null)
+        }
+        else
+        {
+            @Html.ActionLink("Proximo passo", "Details", new { id = ViewBag.ids_passos[0], array = String.Join("-", ViewBag.ids_passos) })
+        }
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Passo }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

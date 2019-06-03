@@ -9,7 +9,7 @@ namespace SweeTron.Controllers
 {
     public class HomeController : Controller
     {
-        private SweeTronEntities1 db = new SweeTronEntities1();
+        private SweeTronEntities2 db = new SweeTronEntities2();
         public ActionResult Index()
         {
             return View();

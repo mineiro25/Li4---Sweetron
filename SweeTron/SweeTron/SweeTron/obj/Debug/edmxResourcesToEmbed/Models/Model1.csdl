@@ -123,7 +123,7 @@
     <End Role="Passo" Type="Self.Passo" Multiplicity="*" />
     <End Role="Receita" Type="Self.Receita" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="SweeTronEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="SweeTronEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Ingrediente" EntityType="Self.Ingrediente" />
     <EntitySet Name="Passo" EntityType="Self.Passo" />
     <EntitySet Name="Possui" EntityType="Self.Possui" />
