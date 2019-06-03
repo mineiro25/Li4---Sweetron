@@ -4,65 +4,72 @@
     ViewBag.Title = "Selecionar";
 }
 
-<h2>Escolha a sua receita</h2>
+<head>
+    <link rel="stylesheet" href="~/css/Receita.css" />
+</head>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dificuldade)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Duracao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Preparacao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Video)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Foto)
-        </th>
-        <th></th>
-    </tr>
+<body class="tabelaReceitas">
+    <h2 style="font-weight: normal; color: black;">Escolha a sua receita</h2>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dificuldade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Duracao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Preparacao)
-        </td>
-        <td>
-            <a
-            href="@Html.DisplayFor(modelItem => item.Video)"
-            target="_blank"
-               > Clickaaaa </a>
-        </td>
-        <td>
-            <img src="
-            @Html.DisplayFor(modelItem => item.Foto)" width="100" height="50"/>
-        </td>
-        <td>
-            @Html.ActionLink("Confecionar", "Details", new { id=item.ID_Receita })
-        </td>
-    </tr>
-}
+    <table class="table" style="font-weight: normal; color: black;">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dificuldade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Duracao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preparacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Video)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayName("Começar")
+            </th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr  class="conteudo">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dificuldade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duracao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preparacao)
+                </td>
+                <td>
+                    <a href="@Html.DisplayFor(modelItem => item.Video)"
+                       target="_blank">Link para o YouTube</a>
+                </td>
+                <td>
+                    <img src="
+            @Html.DisplayFor(modelItem => item.Foto)" width="100" height="50" />
+                </td>
+                <td>
+                    @Html.ActionLink("Confecionar", "Details", new { id = item.ID_Receita })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>

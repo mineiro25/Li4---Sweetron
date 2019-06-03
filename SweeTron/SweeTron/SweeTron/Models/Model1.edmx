@@ -307,7 +307,7 @@
           <End Role="Passo" Type="Self.Passo" Multiplicity="*" />
           <End Role="Receita" Type="Self.Receita" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="SweeTronEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SweeTronEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Ingrediente" EntityType="Self.Ingrediente" />
           <EntitySet Name="Passo" EntityType="Self.Passo" />
           <EntitySet Name="Possui" EntityType="Self.Possui" />
@@ -340,7 +340,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SweeTronModelStoreContainer" CdmEntityContainer="SweeTronEntities2">
+        <EntityContainerMapping StorageEntityContainer="SweeTronModelStoreContainer" CdmEntityContainer="SweeTronEntities3">
           <EntitySetMapping Name="Ingrediente">
             <EntityTypeMapping TypeName="SweeTronModel.Ingrediente">
               <MappingFragment StoreEntitySet="Ingrediente">

@@ -4,10 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Preparação</h2>
 
 <div>
-    <h4>Receita</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -63,14 +62,14 @@
 
         <dd>
             <img src="
-            @Html.DisplayFor(model => model.Foto)" width="100" height="50" />
+            @Html.DisplayFor(model => model.Foto)" width="200" height="200" />
         </dd>
         
-        <dd><h6>Ingredientes:</h6></dd>
+        <dd><h3>Ingredientes:</h3></dd>
 
         @foreach(var ingrediente in ViewBag.Ingredientes)
         {
-            <dd>
+            <dd style="font-size: 15px;">
                 @(ingrediente.Value) @(ingrediente.Key.Nome)
             </dd>
 
@@ -80,5 +79,5 @@
 </div>
 <p>
     @Html.ActionLink("Iniciar confeção","Details","Passos",new { id = ViewBag.ids_passos[0], array = String.Join("-", ViewBag.ids_passos)}, null)
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar a lista", "Index")
 </p>

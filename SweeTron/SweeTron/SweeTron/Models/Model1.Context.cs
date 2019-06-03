@@ -13,10 +13,10 @@ namespace SweeTron.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SweeTronEntities2 : DbContext
+    public partial class SweeTronEntities3 : DbContext
     {
-        public SweeTronEntities2()
-            : base("name=SweeTronEntities2")
+        public SweeTronEntities3()
+            : base("name=SweeTronEntities3")
         {
         }
     
